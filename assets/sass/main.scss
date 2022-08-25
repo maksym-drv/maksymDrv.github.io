@@ -717,7 +717,12 @@
 
 	#header {
 		position: relative;
-		background-image: url('../../images/header.jpg');
+		background: 
+				linear-gradient(
+        	  rgba(0, 0, 0, 0.7), 
+        	  rgba(0, 0, 0, 0.7)
+        	), url('../../images/intro1.jpg');
+		/* background-image: url('../../images/header.jpg');*/
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -1656,3 +1661,16 @@
 			}
 
 	}
+
+.sponsors {
+	bottom: 20px;
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 100px;
+	justify-content: left;
+}
+
+.languages img {
+	width: 30px;
+}
