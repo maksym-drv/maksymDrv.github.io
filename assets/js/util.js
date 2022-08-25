@@ -16,6 +16,13 @@
 				indent = Math.max(0, $this.parents('li').length - 1),
 				href = $this.attr('href'),
 				target = $this.attr('target');
+			
+			var img = '';
+			var text = $this.text();
+			if ($this.children('img').attr('src')) {
+				img = '<img style="width: 25px; vertical-align:middle;" class="indent" src="' + $this.children('img').attr('src') + '">';
+				text = ' English';
+			};
 
 			b.push(
 				'<a ' +
@@ -24,7 +31,8 @@
 					( (typeof href !== 'undefined' && href != '') ? ' href="' + href + '"' : '') +
 				'>' +
 					'<span class="indent-' + indent + '"></span>' +
-					$this.text() +
+					img +
+					'<span style="vertical-align:middle">' + text + '</span>' +
 				'</a>'
 			);
 

@@ -215,3 +215,19 @@
 		});
 
 })(jQuery);
+
+function EasyPeasyParallax() {
+	var scrollPos = $(document).scrollTop();
+	var targetOpacity = 1;
+	scrollPos < 100 ? targetOpacity = '0.'+ (scrollPos*100)/10 : targetOpacity;
+	$('#nav').css({
+		'background-color': 'rgba(0, 0, 0, '+ targetOpacity +')'
+	});
+	console.log(scrollPos,targetOpacity);
+};
+
+$(function(){
+	$(window).scroll(function() {
+		EasyPeasyParallax();
+	});
+});
