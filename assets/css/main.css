@@ -3155,7 +3155,7 @@ input, select, textarea {
 
 	@media screen and (max-width: 800px) {
 		.sponsors .sponsors_images {
-			max-width: 45%;
+			max-width: 50%;
 		}
 		/* .sponsors {
 			/* bottom: -40px; 
