@@ -3150,17 +3150,17 @@ input, select, textarea {
 	justify-content: left;
 }
 	.sponsors .sponsors_images {
-		max-width: 35%;
+		max-width: 50%;
 	}
 
-	@media screen and (max-width: 800px) {
+	@media screen and (min-width: 736px) {
 		.sponsors .sponsors_images {
-			max-width: 50%;
+			max-width: 30%;
 		}
 		/* .sponsors {
 			/* bottom: -40px; 
 			height: 100px;
-		} */
+		}*/
 	}
 
 	.sponsors img {
