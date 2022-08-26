@@ -219,7 +219,7 @@
 function EasyPeasyParallax() {
 	var scrollPos = $(document).scrollTop();
 	var targetOpacity = 1;
-	scrollPos < 100 ? targetOpacity = '0.'+ (scrollPos*100)/10 : targetOpacity;
+	scrollPos < 100 ? targetOpacity = '0.'+ scrollPos : targetOpacity;
 	$('#nav').css({
 		'background-color': 'rgba(0, 0, 0, '+ targetOpacity +')'
 	});
@@ -230,3 +230,19 @@ $(function(){
 		EasyPeasyParallax();
 	});
 });
+
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("nav");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+	navbar.classList.remove("no-fix");
+  } else {
+    navbar.classList.remove("sticky");
+	navbar.classList.add("no-fix");
+  }
+}

@@ -2289,9 +2289,7 @@ input, select, textarea {
 /* Nav */
 
 	#nav {
-		position: fixed;
 		background-color: rgba(0, 0, 0, 0);
-		top: 0;
 		left: 0;
 		width: 100%;
 		text-align: center;
@@ -3153,34 +3151,52 @@ input, select, textarea {
 	margin: 5px 2%;
 }
 
-.sponsors {
-	bottom: 20px;
-	position: absolute;
-	display: flex;
-	width: 100%;
-	justify-content: left;
+.organizations {
+	top: 0px;
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
 }
-	.sponsors .sponsors_images {
+	/*.sponsors .sponsors_images {
 		max-width: 50%;
+	}*/
+
+	.organizations img {
+		padding: 5px;
+		width: 50%;
 	}
 
-	@media screen and (min-width: 736px) {
-		.sponsors .sponsors_images {
-			max-width: 30%;
+	@media screen and (max-width: 800px) {
+		.organizations img {
+			width: 80%;
 		}
-		/* .sponsors {
-			/* bottom: -40px; 
-			height: 100px;
-		}*/
 	}
 
-	.sponsors img {
+	@media screen and (max-width: 450px) {
+		.organizations img {
+			width: 100%;
+		}
+	}
+
+	.organizations div {
 		padding: 5px;
 		width: 40%;
-}
+	}
 
 .languages img {
 	width: 30px;
 	vertical-align: middle;
 }
 
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.no-fix {
+	position: absolute;
+	top: 15%;
+}
