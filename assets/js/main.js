@@ -223,7 +223,6 @@ function EasyPeasyParallax() {
 	$('#nav').css({
 		'background-color': 'rgba(0, 0, 0, '+ targetOpacity +')'
 	});
-	console.log(scrollPos,targetOpacity);
 };
 
 $(function(){
